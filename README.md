@@ -1,45 +1,59 @@
 # 🦸‍♂️ MyLittleHero
+<br />
 
-나와 닮은 마블 히어로 캐릭터 찾기  
+## 1. 개요
+
+### 1-1. 제작 기간 & 참여 인원
+
+* 2022.05.18 ~ 05.25  
+* 김동우, 김진수, 이윤지, 최민기  
+
+### 1-2. 프로젝트 내용
+* 나와 닮은 마블 히어로 캐릭터 찾기
 
 <br />
 
-# 1. 개요
+## 2. 기술 스택
 
-### 1.1 제작기간
+### 2-1. Back-end
 
-> 2022.05.18 ~ 05.25
+* python3  
+* Flask  
+* mongo DB  
+* Keras  
 
-### 2. 참여 인원
+### 2-2. Front-end
 
-> |                    Name                    |  Position   |
-> | :----------------------------------------: | :---------: |
-> | [김동우](https://github.com/kimphysicsman) | Back, Front |
-> |   [김진수](https://github.com/creamone)    | Back, Front |
-> |     [이윤지](https://github.com/J1NU2)     | Back, Front |
-> |    [최민기](https://github.com/mankic)     | Back, Front |
-
-### 3. 역할 분담
-
-> - 김동우 : 메인페이지 + 결과 보여주기 + InceptionV3 모델 학습
-> - 김진수 : 메인페이지 - 모달창 / 헤더 디자인  + 이미지 업로드 (모달창) + MobileNetV2 모델 학습
-> - 이윤지 : 히스토리페이지 + 결과 보여주기 + ResNet50 모델 학습
-> - 최민기 : 로그인 / 회원가입 + VGG16 모델 학습
+* Html 5  
+* CSS  
+* JavaScript
 
 <br />
 
-# 📚 기술 스택
+## 3. 프로젝트 정보
 
-### 1. Back-end
+### 3-1. 핵심 기능
 
-> python3  
-> Flask  
-> Keras  
-> mongo DB  
+* 인물 사진 업로드  
+* 학습시킨 머신 러닝 모델을 사용하여, 업로드한 이미지에 높은 정확도를 가진 마블 히어로 이미지 보여주기  
+* 해당 결과 DB에 저장  
 
-<br />
+### 3-2. 내가 맡은 역할과 focus
 
-# 📊 ERD 
+* CNN 모델 선정 및 학습 - VGG-16  
+  [colab - VGG16](https://colab.research.google.com/drive/1tZzT8EXJJjtB9Z9fpPLuC0VveROhHNih?hl=ko)
+  - 히어로 데이터셋의 크기를 고려해봤을때 VGG-16의 단점인 학습 속도와 메모리 용량 문제가 크게 작용하지 않고 정확도를 올릴 수 있을거라 판단하여 선정
+  - 레이어, Learning Rate 등을 조정하여 손실 함수 최소화를 목적으로 함  
+* 회원 가입, 로그인 UI 및 기능 구현  
+  [코드 링크](https://github.com/mankic/mylittlehero_backend/blob/73c1eb0740ce5c546aa9077694087cd3086e78fc/app.py#L61)
+  - 회원가입시 이메일 양식, 중복 확인
+  - 로그인 정보를 받아서 jwt 토큰 생성  
+  
+### 3-3. VGG-16 모델 학습시 문제점
+* 학습시간이 예상보다 더 소비되는데에 비해 정확도가 다른 모델들과 별반 차이가 없었다.  
+* 팀원들이 서로 학습한 모델의 장단점을 공유하며 학습시간이 적게들고 정확도가 가장 높았던 MobileNetV2 모델 선정  
+  
+### 3-4. ERD 
 
 <details>
 <summary>ERD</summary>
@@ -50,52 +64,11 @@
 
 <br />
 
-<!-- <details>
-<summary>Structure</summary>
-<div markdown="1" style="padding-left: 15px;">
-<img src="" />
-</div>
-</details>
+## 4. 트러블 슈팅
 
-<br /> -->
 
-# 🔑 핵심기능
-
-### 1. 여행장소 검색
-
-> 사용자가 여행장소를 검색하면 DB에서 여행장소를 검색하고  
-> DB에 없는 장소이면 네이버지도에서 검색하여 최상단의 장소의 정보를 가져오고 DB에 저장합니다.  
-> [코드 보러가기](https://github.com/nbcamp-AI-2-fantastic4/MyLittelTrip_backend/blob/d9eba0efc4567cbaef9ec19eea76e76495190a69/recommend/functions/parsing.py#L70)
-
-### 2. 최단 여행경로 찾기 & 여행일정 만들기
-
-> 사용자가 입력한 여행장소들을 바탕으로 여행일정을 만듭니다.  
-> [코드 보러가기](https://github.com/nbcamp-AI-2-fantastic4/MyLittelTrip_backend/blob/d9eba0efc4567cbaef9ec19eea76e76495190a69/recommend/functions/schedule.py#L14)
 
 <br />
 
-# 📕 기타 자료
-
-### 1. 기획문서
-
-> [MyLittleHero - Notion](https://www.notion.so/kimphysicsman/My-Little-Hero-13b315a07f1940c79ddc81ad06c79fd0)
-
-### 2. 히어로 데이터셋
-
-> [Marvel Heroes - Kaggle](https://www.kaggle.com/datasets/hchen13/marvel-heroes)
-
-### 3. 발표영상
-
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <p align="center"> 22.05.25 발표 </p>
-        <a href="https://youtu.be/EVSkMMqKbns" title="MyLittleHero 최종발표">
-          <img align="center" src="https://user-images.githubusercontent.com/104434422/186104467-2ef162b7-fe34-4d8c-abb3-a0c6858a5fea.png" width="300" >
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+## 5. 회고
+* 
