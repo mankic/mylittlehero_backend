@@ -6,7 +6,7 @@
 ### 1-1. 제작 기간 & 참여 인원
 
 * 2022.05.18 ~ 05.25  
-* 김동우, 김진수, 이윤지, 최민기  
+* 최민기, 김동우, 김진수, 이윤지  
 
 ### 1-2. 프로젝트 내용
 * 나와 닮은 마블 히어로 캐릭터 찾기
@@ -17,14 +17,13 @@
 
 ### 2-1. Back-end
 
-* python3  
+* python  
 * Flask  
 * mongo DB  
-* Keras  
 
 ### 2-2. Front-end
 
-* Html 5  
+* Html  
 * CSS  
 * JavaScript
 
@@ -34,9 +33,25 @@
 
 ### 3-1. 핵심 기능
 
-* 인물 사진 업로드  
-* 학습시킨 머신 러닝 모델을 사용하여, 업로드한 이미지에 높은 정확도를 가진 마블 히어로 이미지 보여주기  
-* 해당 결과 DB에 저장  
+* 회원가입, 로그인 기능  
+* 머신 러닝 모델을 이용하여 업로드한 이미지와 정확도가 가장 높은 마블 히어로 이미지 보여주기  
+* 회원 및 이미지 데이터 CRUD  
+
+### 3-2. 프로젝트 구조
+<img src="https://user-images.githubusercontent.com/104434422/198260748-8f81d6f4-dd5f-4327-890f-682922417281.png"  width="700" height="370">
+
+### 3-3. 프로젝트 구현 이미지
+<details>
+<summary>이미지 보기</summary>
+
+
+<img src="https://user-images.githubusercontent.com/104434422/198261558-03d02bea-41b3-4fa1-beea-1562e881b0b0.png"  width="400" height="200"> <img src="https://user-images.githubusercontent.com/104434422/198262889-162f43db-dcf4-41df-bd80-3a5722c3b65f.png"  width="400" height="200">
+<img src="https://user-images.githubusercontent.com/104434422/198261762-e0123a67-603a-4877-9d83-0b20af678e8b.png"  width="400" height="100"> <img src="https://user-images.githubusercontent.com/104434422/198262463-467ade9f-a85e-4664-a3c4-5f1fdf679dd2.png"  width="400" height="100">
+<img src="https://user-images.githubusercontent.com/104434422/198263530-efe899b6-66c3-4352-a5a7-70037a15c564.png"  width="400" height="200"> <img src="https://user-images.githubusercontent.com/104434422/198263822-d7770611-8dfc-4251-8ef7-94b9a2415277.png"  width="400" height="200">
+<img src="https://user-images.githubusercontent.com/104434422/198264028-51538d5a-4339-46c1-86c6-f22c1e56f516.png"  width="400" height="400">
+
+</details>
+
 
 ### 3-2. 내가 맡은 역할과 focus
 
